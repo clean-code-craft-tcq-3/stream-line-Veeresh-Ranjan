@@ -13,7 +13,7 @@ jobs:
       run: pip install lizard
 
     - name: Limit complexity
-      run: $HOME/.local/bin/lizard --exclude "./test/*" --CCN 3
+      run: $HOME/.local/bin/lizard --exclude "./include/*" --CCN 3
 
     - name: Check size
       run: |
