@@ -37,3 +37,4 @@ int main(){
     funcPtr = &callPrint;
     funcPtr();
 }
+
