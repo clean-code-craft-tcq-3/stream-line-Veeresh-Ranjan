@@ -16,11 +16,19 @@ def process_sender_data(readings):
   Temperature_readings=[]
   readiings_list= [reading for reading in reading_list if reading]
   print (readiings_list)
+  return calculate_statistics(get_SOC_reading(readings_list),get_temperature_readings(reading_list))
+  
+def get_SOC_reading(readings_list):
   for value in readiings_list:
     json_data= json.loads(value)
     SOC_readings.append(json_data["Battery"]["SOC"])
+  return SOC_readings
+
+def get_temperature_readings(reading_list):
+  for value in readiings_list:
+    json_data= json.loads(value)
     Temperature_readings.append(json_data["Battery"]["Temperature"])
-  return calculate_statistics(SOC_readings,Temperature_readings)
+  return Temperature_readings
   
 def get_min_temperature(Temperature_readings):
   return min(Temperature_readings)
