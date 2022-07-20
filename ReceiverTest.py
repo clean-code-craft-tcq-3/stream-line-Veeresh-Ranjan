@@ -24,7 +24,7 @@ class receiver_test(unittest.TestCase):
     self.assertTrue(Receiver.calculate_moving_avg([40,23,56,54,65,55,52,50])==55.2)
   
   def test_calculate_statistics(self):
-    self.assertTrue(Receiver.calculate_statistics([10,20,30,40,50,60,70],[15,20,25,30,35,40,45,50])==(10,70,50.0 , 15, 50, 40.0))
+    self.assertTrue(Receiver.calculate_statistics([10,20,30,40,50,60,70],[15,20,25,30,35,40,45,50])==(10,70,15,50,50.0,40.0))
     
     
     
