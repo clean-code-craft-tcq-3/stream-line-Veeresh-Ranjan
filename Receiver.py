@@ -15,7 +15,7 @@ def process_sender_data(readings):
   SOC_readings= []
   Temperature_readings=[]
   readiings_list= [reading for reading in reading_list if reading]
-  print readiings_list
+  print (readiings_list)
   for value in readiings_list:
     json_data= json.loads(value)
     SOC_readings.append(json_data["Battery"]["SOC"])
