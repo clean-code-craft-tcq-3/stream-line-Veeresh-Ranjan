@@ -14,7 +14,7 @@ def process_sender_data(readings):
   reading_list= readings.split("\n")
   SOC_readings= []
   Temperature_readings=[]
-  readiings_list= [reading for reading reading_list]
+  readiings_list= [reading for reading in reading_list if reading]
   print readiings_list
   for value in readiings_list:
     json_data= json.loads(value)
