@@ -53,9 +53,16 @@ def calculate_statistics(SOC_readings, Temperature_readings):
   max_temp= get_max_temperature(Temperature_readings)
   moving_avg_soc= calculate_moving_avg(SOC_readings)
   moving_avg_temp= calculate_moving_avg(Temperature_readings)
-  print(min_soc, max_soc, min_temp, max_temp, moving_avg_soc, moving_avg_temp)
+  print_statistics(min_soc, max_soc, min_temp, max_temp, moving_avg_soc, moving_avg_temp)
   return min_soc, max_soc, min_temp, max_temp, moving_avg_soc, moving_avg_temp
-  
+
+def print_statistics(min_soc, max_soc, min_temp, max_temp, moving_avg_soc, moving_avg_temp):
+  print("Minimum SOC : ", min_soc)
+  print("Maximum SOC : ", max_soc)
+  print("Minimum Temperature : ", min_temp)
+  print("Maximum Temperature : ", max_temp)
+  print("Moving average SOC : ", moving_avg_soc)
+  print("Moving average Temperature : ", moving_avg_temp)
 
 if __name__=="__main__":
   data= get_reading_from_sender()
