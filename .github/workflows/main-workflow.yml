@@ -29,9 +29,6 @@ jobs:
         name: coverage
         path: ./*.html
         retention-days: 21
-        
-    - name: Build Receiver
-      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testcheckerReceiver *.py*
-      
+         
     - name: Run Receiver
       run: python ReceiverTest.py
