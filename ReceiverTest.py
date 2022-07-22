@@ -9,16 +9,16 @@ data='''{"Battery"
 
 class receiver_test(unittest.TestCase):
   def test_get_min_temperature(self):
-    self.assertTrue(Receiver.get_min_temperature([23,34,56,67,54,32,21])==21)
+    self.assertTrue(Receiver.get_min_value([23,34,56,67,54,32,21])==21)
     
   def test_get_max_temperature(self):
-    self.assertTrue(Receiver.get_max_temperature([23,34,56,67,54,32,21])==67)
+    self.assertTrue(Receiver.get_max_value([23,34,56,67,54,32,21])==67)
   
   def test_get_min_SOC(self):
-    self.assertTrue(Receiver.get_min_SOC([40,20,30,42,23,35])==20)
+    self.assertTrue(Receiver.get_min_value([40,20,30,42,23,35])==20)
     
   def test_get_max_SOC(self):
-    self.assertTrue(Receiver.get_max_SOC([40,20,30,42,23,35])==42)
+    self.assertTrue(Receiver.get_max_value([40,20,30,42,23,35])==42)
     
   def test_calculate_moving_avg(self):
     self.assertTrue(Receiver.calculate_moving_avg([40,23,56,54,65,55,52,50])==55.2)
