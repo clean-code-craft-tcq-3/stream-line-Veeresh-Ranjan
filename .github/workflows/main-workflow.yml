@@ -14,10 +14,10 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y gcovr
-    - name: build
+    - name: build sender
       run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker *.c*
       
-    - name: run
+    - name: run sender
       run: ./testchecker
 
     - name: collect coverage
@@ -30,5 +30,8 @@ jobs:
         path: ./*.html
         retention-days: 21
         
-    - name: Run
+    - name: Build Receiver
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testcheckerReceiver Receiver.py
+      
+    - name: Run Receiver
       run: python ReceiverTest.py
