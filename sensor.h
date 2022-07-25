@@ -20,7 +20,7 @@ auto readFromFile(string path){
 void printOnConsole(auto bufferPtr, std::ostream& output)
 {
     auto bufferSOC = bufferPtr["Battery"]["SOC"];
-    auto bufferTemperature = bufferPtr["Battery"]["SOC"];
+    auto bufferTemperature = bufferPtr["Battery"]["Temperature"];
     output << "\nBattery Monitoring Results: "<<endl;
     output<<"SOC :"<<bufferSOC<<endl;
     output<<"Temperature :"<<bufferTemperature<<endl;
