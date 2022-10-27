@@ -5,3 +5,4 @@ void callPrint(){
     auto bufferPtr = readFromFile(path);
     printOnConsole(bufferPtr,cout);
 }
+ 
